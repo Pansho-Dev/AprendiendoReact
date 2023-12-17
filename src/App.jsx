@@ -10,10 +10,13 @@ import { ComponenteUseId } from './components/ComponenteUseId'
 import { ComponenteUseCallBack } from './components/ComponenteUseCallback'
 import { ComponenteUseMemo } from './components/ComponenteUseMemo'
 import { ComponenteUseReduce } from './components/ComponenteUseReduce'
-
+import { useState } from 'react'
+import { MiContexto } from './components/MiContexto'
+import { MiContextoPrueba} from './components/MiContextoPrueba'
 
 function App() {
 
+  const [text, setText] = useState("")
 
   return (
     <>
@@ -39,6 +42,12 @@ function App() {
       <ComponenteUseCallBack/>
       <ComponenteUseMemo/>
       <ComponenteUseReduce></ComponenteUseReduce>
+      
+      <MiContexto.Provider value={{text,setText}}>
+
+        <MiContextoPrueba></MiContextoPrueba>
+
+      </MiContexto.Provider>
       </>
   )
 }
