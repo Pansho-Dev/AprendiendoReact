@@ -13,7 +13,8 @@ import { ComponenteUseReduce } from './components/ComponenteUseReduce'
 import { useState } from 'react'
 import { MiContexto } from './components/MiContexto'
 import { MiContextoPrueba} from './components/MiContextoPrueba'
-
+import { ThemeProvider } from './components/ThemeContext';
+import ThemedButton from './components/ThemedButton';
 function App() {
 
   const [text, setText] = useState("")
@@ -48,6 +49,12 @@ function App() {
         <MiContextoPrueba></MiContextoPrueba>
 
       </MiContexto.Provider>
+
+      <ThemeProvider>
+        <div>
+          <h1>My Themed App</h1><ThemedButton />
+        </div>
+      </ThemeProvider>
       </>
   )
 }

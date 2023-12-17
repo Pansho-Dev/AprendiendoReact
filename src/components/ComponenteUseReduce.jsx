@@ -37,7 +37,8 @@ export const ComponenteUseReduce = () => {
         <br></br>
         <button onClick={() => dispatch({ type: "decrement" })}> - </button>
         <button onClick={() => dispatch({ type: "increment" })}> + </button>
-      </div>
+        <hr></hr>
+        </div>
     </>
   );
 };
